@@ -1,0 +1,76 @@
+{
+  "name": "@githubnext/vscode-react-webviews",
+  "version": "1.0.0",
+  "description": "A sample/starter template for developing VS Code extensions with webviews",
+  "main": "out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint . --ext .ts,.tsx",
+    "watch": "tsc -watch -p ./",
+    "format": "prettier --write **/*.ts",
+    "dev": "vite build"
+  },
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/githubnext/vscode-react-webviews.git"
+  },
+  "keywords": [
+    "vscode"
+  ],
+  "author": "Next Devex <next-devex@github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/githubnext/vscode-react-webviews.git/issues"
+  },
+  "homepage": "https://github.com/githubnext/vscode-react-webviews.git#readme",
+  "devDependencies": {
+    "@githubocto/tailwind-vscode": "^1.0.4",
+    "@types/node": "^16.4.13",
+    "@types/react": "^17.0.16",
+    "@types/react-dom": "^17.0.9",
+    "@types/tailwindcss": "^2.2.1",
+    "@types/vscode": "^1.59.0",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "autoprefixer": "^10.3.1",
+    "eslint": "^8.1.0",
+    "postcss": "^8.3.6",
+    "postcss-nested": "^5.0.6",
+    "prettier": "^2.3.2",
+    "tailwindcss": "^2.2.7",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@hediet/node-reload": "^0.7.3",
+    "history": "^5.0.1",
+    "nanoid": "^3.1.23",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^6.0.0-beta.2",
+    "vite": "^2.4.4",
+    "zustand": "^3.5.12"
+  },
+  "activationEvents": [
+    "onCommand:NextWebview1.start",
+    "onCommand:NextWebview2.start"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "NextWebview1.start",
+        "title": "Open Webview 1",
+        "category": "GitHub Next"
+      },
+      {
+        "command": "NextWebview2.start",
+        "title": "Open Webview 2",
+        "category": "GitHub Next"
+      }
+    ]
+  }
+}
